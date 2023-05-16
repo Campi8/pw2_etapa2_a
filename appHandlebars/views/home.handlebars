@@ -1,8 +1,39 @@
 <h1>Página Renderizada com Template Engine</h1>
+
 <p>Agora vamos utilizar técnicas de layout parametro</p>
+
 <h3>Usuário</h3>
+
+<form action="/verifyuser" method="post">
+
+<label for="nome"> Nome </label>
+
+<input type="text" name="name" placeholder="nome do usuario">
+<label for="age"> Idade</label>
+
+<input type="text" name="age" placeholder="idade usuario">
+<button type="submit"> Enviar </button>
+
+</form>
+
 <ul>
     <li><strong>Nome:</strong> {{user.name}} </li>
     <li><strong>Sobrenome:</strong> {{user.surname}} </li>
     <li><strong>Idade:</strong> {{user.age}} </li>
 </ul>
+
+
+{{#if approved}}
+<p> Parabens o seu cadastro esta aprovado</p>
+{{else}}
+<p> O seu cadastro nao foi aprovado </p>
+{{/if}}
+
+
+
+{{#if auth}}
+<P> 
+    Voce esta Autenticado no sistema, <a href="/dashboards"> Dashboards </a>. 
+    Visualize a areqa de login.
+</P>
+{{/if}}
