@@ -16,3 +16,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 //#endregion
 
+const conn = require('./db/conn')
+const Thought = require('./models/Thought')
+const User = require('./models/User')
+
