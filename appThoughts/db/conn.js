@@ -6,14 +6,14 @@ const {Sequelize} = require('sequelize')
 
 //vazio traz sem executar parametro
 const sequelize = new Sequelize('thoughts', 'root', '123456',{
-    host:'127.0.1', //localhost
+    host:'localhost', //localhost
     dialect:'mysql'
 });
 
 //externo usa try, interno poderia ser promisses
 try{
     sequelize.authenticate()
-    console.info('Conectado ao serviço de dadso')
+    console.info('Conectado ao serviço de dados')
 
 } catch(error){
     console.error('Não conectamos ao serviço de dados =>', error)

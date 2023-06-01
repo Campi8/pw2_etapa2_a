@@ -20,3 +20,10 @@ const conn = require('./db/conn')
 const Thought = require('./models/Thought')
 const User = require('./models/User')
 
+conn
+.sync()
+.then(() => {
+    app.listen(3000)
+})
+.catch((erro) => console.error(erro))
+
