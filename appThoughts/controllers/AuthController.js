@@ -98,4 +98,5 @@ module.exports = class UserController {
         req.session.destroy()
         res.redirect('/login')
     }
+    
 }
